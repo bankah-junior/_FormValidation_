@@ -1,0 +1,12 @@
+@import 'config';
+@import 'login';
+@import 'signup';
+@import 'home';
+@import './theme';
+@import './register';
+
+body {
+    background: $light-bg-color;
+    color: $light-txt-color;
+    @include transition();
+}

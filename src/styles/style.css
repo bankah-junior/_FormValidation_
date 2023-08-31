@@ -1,0 +1,35 @@
+body.dark {
+  background: #000;
+  color: #fff;
+}
+
+[data-button=toggle-btn] {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  transition: all 0.5s ease-in-out;
+}
+[data-button=toggle-btn]:focus, [data-button=toggle-btn]:active {
+  border: none;
+  outline: none;
+}
+[data-button=toggle-btn]:hover {
+  animation: scaler 5s ease-in-out infinite;
+}
+@keyframes scaler {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+body {
+  background: #fff;
+  color: #000;
+  transition: all 0.5s ease-in-out;
+}
+
+/*# sourceMappingURL=style.css.map */

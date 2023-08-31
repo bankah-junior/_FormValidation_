@@ -1,0 +1,21 @@
+// Declaring and assigning variables
+$light-bg-color: #fff;
+$light-txt-color: #000;
+$dark-bg-color: #000;
+$dark-txt-color: #fff;
+$warning-txt-color: #cf1c1c;
+$success-txt-color: #21e721;
+
+// Declaring mixins
+@mixin theme($dark-theme: true) {
+  @if $dark-theme {
+    background: $dark-bg-color;
+    color: $dark-txt-color;
+  }
+}
+
+@mixin transition() {
+  transition: all 0.5s ease-in-out;
+}
+
+// Declaring functions
