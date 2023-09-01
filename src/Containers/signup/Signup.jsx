@@ -1,6 +1,5 @@
 import { React } from 'react';
-import { ThemeChanger } from '../../components';
-import { Link } from 'react-router-dom';
+import { SignupContainer, ThemeChanger } from '../../components';
 
 
 const Signup = () => {
@@ -9,8 +8,7 @@ const Signup = () => {
     <div>
       <ThemeChanger />
 
-      <h1>Register</h1>
-      <Link to="/home">Go Home</Link>
+      <SignupContainer />
 
     </div>
   );

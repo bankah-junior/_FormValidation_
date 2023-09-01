@@ -1,36 +1,49 @@
 body.light {
   @include theme($dark-theme: false);
+
+  .sun-icon {
+    display: none;
+  }
+
+  .moon-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 body.dark {
   @include theme($dark-theme: true);
+
+  // Form container
+  .container, [data-button="toggle-btn"] {
+    box-shadow:0 4px 6px -1px rgba(255,255,255,.5),0 2px 4px -1px rgba(255,255,255,.4);
+  }
+
+  .moon-icon {
+    display: none;
+  }
+
+  .sun-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
 
 [data-button="toggle-btn"] {
   position: fixed;
-  bottom: 1rem;
+  top: 1rem;
   right: 1rem;
   z-index: 9999;
+  box-shadow:0 4px 6px -1px rgba(255,255,255,.5),0 2px 4px -1px rgba(0,0,0,.4);
   @include transition();
 
   &:focus,
   &:active {
     border: none;
     outline: none;
-  }
-
-  &:hover {
-    animation: scaler 5s ease-in-out infinite;
-  }
-
-  @keyframes scaler {
-    from {
-      transform: scale(1);
-    }
-
-    to {
-      transform: scale(1.2);
-    }
   }
 }
 

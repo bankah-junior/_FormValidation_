@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from "react";
+import { RiMoonFill, RiSunFill } from 'react-icons/ri';
 
 const ThemeChanger = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light"); // Getting the value of "theme" from local storage and assigning it to theme state
@@ -17,8 +18,15 @@ const ThemeChanger = () => {
 
   return (
     <div>
-      <button data-button="toggle-btn" onClick={toggleTheme}>
-        Toggle Theme
+      <button data-button="toggle-btn" onClick={toggleTheme} className="flex p-2 rounded-lg">
+        <div className="sun-icon">
+          <span className="mr-2">Switch to </span>
+          <RiSunFill />
+        </div>
+        <div className="moon-icon">
+          <span className="mr-2">Switch to </span>
+          <RiMoonFill />
+        </div>
       </button>
     </div>
   );

@@ -1,6 +1,5 @@
 import React from 'react';
-import { ThemeChanger } from '../../components';
-import { Link } from 'react-router-dom';
+import { LoginContainer, ThemeChanger } from '../../components';
 
 const Login = () => {
 
@@ -8,8 +7,7 @@ const Login = () => {
     <div>
       <ThemeChanger />
 
-      <h1>Login Page</h1>
-      <Link to="/signup">Register Now.</Link>
+      <LoginContainer />
         
     </div>
   )
