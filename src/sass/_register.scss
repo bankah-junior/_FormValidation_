@@ -22,7 +22,13 @@ form {
         }
 
         .input__message {
+            display: block;
             margin-bottom: 22px;
+            color: $warning-txt-color;
+        }
+
+        input:valid ~ .input__message {
+            display: none;
         }
         
         /* Overwrite default styles of hr */

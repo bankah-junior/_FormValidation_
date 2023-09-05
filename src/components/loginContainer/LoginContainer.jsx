@@ -31,7 +31,7 @@ const LoginContainer = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
             />
-            <p className="input__message hidden">Error / Success</p>
+            <p className="input__message hidden"></p>
   
             <label for="psw"><b>Password</b></label>
             <input
@@ -42,7 +42,7 @@ const LoginContainer = () => {
             onChange={(e) => setPassword(e.target.value)}
             required
             />
-            <p className="input__message hidden">Error / Success</p>
+            <p className="input__message hidden"></p>
   
             <hr/>
             <p>Forget password? <Link to="#login">Reset Password</Link>.</p>

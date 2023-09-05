@@ -14,6 +14,12 @@ body.dark {
 body.dark .container, body.dark [data-button=toggle-btn] {
   box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.5), 0 2px 4px -1px rgba(255, 255, 255, 0.4);
 }
+body.dark .container input[type=text], body.dark .container input[type=password], body.dark .container input[type=email], body.dark [data-button=toggle-btn] input[type=text], body.dark [data-button=toggle-btn] input[type=password], body.dark [data-button=toggle-btn] input[type=email] {
+  background: #b3afaf;
+}
+body.dark .container input[type=text]::placeholder, body.dark .container input[type=password]::placeholder, body.dark .container input[type=email]::placeholder, body.dark [data-button=toggle-btn] input[type=text]::placeholder, body.dark [data-button=toggle-btn] input[type=password]::placeholder, body.dark [data-button=toggle-btn] input[type=email]::placeholder {
+  color: #000;
+}
 body.dark .moon-icon {
   display: none;
 }
@@ -63,7 +69,12 @@ form .container input[type=text]:focus, form .container input[type=password]:foc
   outline: none;
 }
 form .container .input__message {
+  display: block;
   margin-bottom: 22px;
+  color: #cf1c1c;
+}
+form .container input:valid ~ .input__message {
+  display: none;
 }
 form .container hr {
   border: 1px solid #f1f1f1;

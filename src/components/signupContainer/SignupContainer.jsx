@@ -10,11 +10,7 @@ const SignupContainer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name.trim() !== '' && email.trim() !== '' && password.trim() !== '') {
-      
-      alert('Registered Successfully!!')
-      history.push('/home');  // Redirecting to home page
-    }
+    alert(`Registration Successful`);
   };
 
   return (
@@ -26,51 +22,58 @@ const SignupContainer = () => {
 
           <label for="name"><b>Name</b></label>
           <input
-          className="md:p-4 p-2 mb-8"
+          className="md:p-4 p-2 mb-4"
           type="text"
           placeholder="Enter Your Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
           />
-          <p className="input__message hidden">Error / Success</p>
 
           <label for="psw"><b>Email</b></label>
           <input
-          className="md:p-4 p-2 mb-8"
+          className="md:p-4 p-2 mb-4"
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          required
+          required="true"
           />
-          <p className="input__message hidden">Error / Success</p>
+          <p className="input__message">
+            INVALID EMAIL
+          </p>
 
           <div className="w-full flex flex-col md:flex-row justify-between">
             <div className="w-full md:w-100-60 flex flex-col">
               <label for="psw"><b>Password</b></label>
               <input
-              className="md:p-4 p-2 mb-8"
+              className="md:p-4 p-2 mb-4"
               type="password"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              required
+              pattern="^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$"
+              required="true"
               />
-              <p className="input__message hidden">Error / Success</p>
+              <p className="input__message">
+                NUMBER(S), LETTER(S), SYMBOL(S) AND 8 -20 LONG
+              </p>
             </div>
 
             <div className="w-full md:w-100-60 flex flex-col">
               <label for="psw"><b>Confirm Password</b></label>
               <input
-              className="md:p-4 p-2 mb-8"
+              className="md:p-4 p-2 mb-4"
               type="password"
               placeholder="Confirm Password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              required
+              pattern={password}
+              required="true"
               />
-              <p className="input__message hidden">Error / Success</p>
+              <p className="input__message">
+                PASSWORD DOES NOT MATCH
+              </p>
             </div>
           </div>
 

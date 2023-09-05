@@ -18,6 +18,14 @@ body.dark {
   // Form container
   .container, [data-button="toggle-btn"] {
     box-shadow:0 4px 6px -1px rgba(255,255,255,.5),0 2px 4px -1px rgba(255,255,255,.4);
+
+    input[type=text], input[type=password], input[type=email] {
+      background: #b3afaf;
+    }
+
+    input[type=text]::placeholder, input[type=password]::placeholder, input[type=email]::placeholder {
+      color: #000;
+    }
   }
 
   .moon-icon {
